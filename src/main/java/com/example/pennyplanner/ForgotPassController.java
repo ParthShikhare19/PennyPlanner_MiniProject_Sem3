@@ -37,8 +37,8 @@ public class ForgotPassController {
     private static final String DB_PASSWORD = "oracle";
 
     // Email credentials - Replace with your email and app-specific password
-    private static final String EMAIL_USER = "AKIAYPRDIK6JKBW57QLJ";
-    private static final String EMAIL_PASSWORD = "BJrTDmRd5VSlPSM4n0Aszi83O3mau4aVm27Es6u+PCOq"; // App-specific password here
+    private static final String EMAIL_USER = "";
+    private static final String EMAIL_PASSWORD = ""; // App-specific password here
 
     @FXML
     private void Submit() {
@@ -124,7 +124,7 @@ public class ForgotPassController {
         try {
             // Create the email
             Message message = new MimeMessage(session);
-            message.setFrom(new InternetAddress("tayyabali@dbit.in"));
+            message.setFrom(new InternetAddress(""));
             message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(recipientEmail));
             message.setSubject("Password Reset - Penny Planner");
             message.setText("Your new password is: " + newPassword);
