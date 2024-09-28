@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pennyplanner.ForgotPassController">
+   <right>
+      <AnchorPane prefHeight="400.0" prefWidth="402.0" style="-fx-background-color: white;" stylesheets="@buttons.css" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="MIDNIGHTBLUE" layoutX="59.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Forgot Password">
+               <font>
+                  <Font size="41.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="64.0" fitWidth="55.0" layoutX="173.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@forgot.png" />
+               </image>
+            </ImageView>
+            <Text fill="MIDNIGHTBLUE" layoutX="14.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Text>
+            <Text fill="MIDNIGHTBLUE" layoutX="46.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail ID">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Text>
+            <TextField fx:id="emailField" layoutX="154.0" layoutY="172.0" prefHeight="26.0" prefWidth="206.0" promptText="Email" style="-fx-background-radius: 20;" />
+            <Button fx:id="submitButton" layoutX="171.0" layoutY="227.0" mnemonicParsing="false" onAction="#Submit" style="-fx-background-radius: 20; -fx-background-color: #ffc107;" text="SUBMIT" />
+            <Button layoutX="14.0" layoutY="361.0" mnemonicParsing="false" onAction="#Back" prefHeight="31.0" prefWidth="59.0" style="-fx-background-color: #ffc107; -fx-background-radius: 20;" text="Back">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </right>
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="400.0" prefWidth="200.0" style="-fx-background-color: #191970;">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="25.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@budget.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" layoutX="31.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Penny">
+                     <font>
+                        <Font name="Yu Gothic UI Light" size="53.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="14.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Planner">
+                     <font>
+                        <Font name="Yu Gothic UI Light" size="53.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>

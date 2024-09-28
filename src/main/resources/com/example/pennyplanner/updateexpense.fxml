@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="849.0" style="-fx-background-color: #191970;" stylesheets="@buttons.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pennyplanner.UpdateExpenseController">
+    <children>
+        <VBox layoutY="160.0" prefHeight="383.0" prefWidth="42.0" style="-fx-background-color: #191970;">
+            <children>
+                <VBox alignment="TOP_CENTER" prefHeight="280.0" prefWidth="42.0" spacing="17.0">
+                    <children>
+                        <ImageView fitHeight="46.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@dashboard.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="46.0" fitWidth="32.0" layoutX="16.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@wallet.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="46.0" fitWidth="32.0" layoutX="16.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@analytics.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="50.0" fitWidth="32.0" layoutX="16.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@goals.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="50.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@settings.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+        <VBox layoutX="42.0" layoutY="158.0" prefHeight="383.0" prefWidth="158.0" style="-fx-background-color: #191970;">
+            <children>
+                <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="196.0" style="-fx-background-color: #191970;" text="DASHBOARD" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Button>
+                <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="46.0" prefWidth="202.0" style="-fx-background-color: #191970;" text="ADD EXPENSES" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Button>
+                <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="46.0" prefWidth="202.0" style="-fx-background-color: #191970;" text="ANALYSYS" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Button>
+                <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="46.0" prefWidth="202.0" style="-fx-background-color: #191970;" text="GOALS" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Button>
+                <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="46.0" prefWidth="202.0" style="-fx-background-color: #191970;" text="SETTINGS" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Button>
+            </children>
+        </VBox>
+        <AnchorPane prefHeight="158.0" prefWidth="200.0" style="-fx-background-color: #191970;">
+            <children>
+                <ImageView fitHeight="63.0" fitWidth="75.0" layoutX="69.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@user%20(3).png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="211.0" layoutY="10.0" prefHeight="523.0" prefWidth="628.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10;">
+            <children>
+                <ScrollBar layoutX="607.0" orientation="VERTICAL" prefHeight="523.0" prefWidth="14.0" />
+                <Text fill="MIDNIGHTBLUE" layoutX="12.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description">
+                    <font>
+                        <Font name="System Bold" size="29.0" />
+                    </font>
+                </Text>
+                <Text fill="MIDNIGHTBLUE" layoutX="12.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount">
+                    <font>
+                        <Font name="System Bold" size="29.0" />
+                    </font>
+                </Text>
+                <Text fill="MIDNIGHTBLUE" layoutX="14.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Category">
+                    <font>
+                        <Font name="System Bold" size="29.0" />
+                    </font>
+                </Text>
+                <Text fill="MIDNIGHTBLUE" layoutX="15.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transaction Type">
+                    <font>
+                        <Font name="System Bold" size="29.0" />
+                    </font>
+                </Text>
+                <Text fill="MIDNIGHTBLUE" layoutX="14.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment Method">
+                    <font>
+                        <Font name="System Bold" size="29.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="descriptionField1" layoutX="12.0" layoutY="42.0" prefHeight="63.0" prefWidth="577.0" promptText="Description" style="-fx-background-radius: 0;" />
+                <TextField fx:id="amountField1" layoutX="12.0" layoutY="143.0" prefHeight="50.0" prefWidth="583.0" promptText="Amount" style="-fx-background-radius: 0;" />
+                <TextField fx:id="transactionTypeField1" layoutX="12.0" layoutY="313.0" prefHeight="50.0" prefWidth="583.0" promptText="Income/Expense" style="-fx-background-radius: 0;" />
+                <TextField fx:id="paymentMethodField1" layoutX="12.0" layoutY="402.0" prefHeight="63.0" prefWidth="583.0" promptText="Payment Method" style="-fx-background-radius: 0;" />
+                <Button layoutX="269.0" layoutY="476.0" mnemonicParsing="false" onAction="#ApplyUpdate" prefHeight="31.0" prefWidth="77.0" style="-fx-background-color: #ffc107; -fx-background-radius: 20;" text="Apply">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Button>
+                <ChoiceBox fx:id="choiceBox1" layoutX="15.0" layoutY="237.0" prefWidth="150.0" />
+                <Button layoutX="12.0" layoutY="476.0" mnemonicParsing="false" onAction="#BackAddExpense" prefHeight="31.0" prefWidth="59.0" style="-fx-background-color: #ffc107; -fx-background-radius: 20;" text="Back">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Button>
+                <Text fill="MIDNIGHTBLUE" layoutX="218.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date">
+                    <font>
+                        <Font name="System Bold" size="29.0" />
+                    </font>
+                </Text>
+                <DatePicker fx:id="datePicker1" layoutX="181.0" layoutY="237.0" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="849.0" style="-fx-background-color: #191970;" stylesheets="@buttons.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pennyplanner.SettingsController">
+   <children>
+      <VBox layoutY="159.0" prefHeight="383.0" prefWidth="42.0" style="-fx-background-color: #191970;">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="300.0" prefWidth="42.0" spacing="17.0">
+               <children>
+                  <ImageView fitHeight="46.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@dashboard.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="46.0" fitWidth="32.0" layoutX="16.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@wallet.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="46.0" fitWidth="32.0" layoutX="16.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@analytics.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="32.0" layoutX="16.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@goals.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@settings.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <VBox layoutX="42.0" layoutY="158.0" prefHeight="383.0" prefWidth="158.0" style="-fx-background-color: #191970;">
+         <children>
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#SettingsToDash" prefHeight="50.0" prefWidth="196.0" style="-fx-background-color: #191970;" text="DASHBOARD" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#SettingsToAddexpenses" prefHeight="46.0" prefWidth="202.0" style="-fx-background-color: #191970;" text="ADD EXPENSES" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#SettingsToAnalysis" prefHeight="46.0" prefWidth="202.0" style="-fx-background-color: #191970;" text="ANALYSYS" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#SettingsToGoals" prefHeight="46.0" prefWidth="202.0" style="-fx-background-color: #191970;" text="GOALS" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="46.0" prefWidth="202.0" style="-fx-background-color: #191970;" text="SETTINGS" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <AnchorPane prefHeight="158.0" prefWidth="200.0" style="-fx-background-color: #191970;">
+         <children>
+            <ImageView fitHeight="63.0" fitWidth="75.0" layoutX="69.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@user%20(3).png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="221.0" layoutY="10.0" prefHeight="522.0" prefWidth="620.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10;">
+         <children>
+            <Text fill="MIDNIGHTBLUE" layoutX="14.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Settings">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Text>
+            <Separator layoutX="14.0" layoutY="77.0" prefHeight="0.0" prefWidth="603.0" />
+            <Text fill="MIDNIGHTBLUE" layoutX="7.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name :">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Button layoutX="490.0" layoutY="105.0" mnemonicParsing="false" onAction="#editName" prefHeight="32.0" prefWidth="106.0" style="-fx-background-color: #ffc107;" text="Edit Name" />
+            <Text fill="MIDNIGHTBLUE" layoutX="-2.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Username :">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Text fill="MIDNIGHTBLUE" layoutX="7.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password :">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Text fill="MIDNIGHTBLUE" layoutX="7.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email-ID :">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Button layoutX="490.0" layoutY="164.0" mnemonicParsing="false" onAction="#editUsername" prefHeight="32.0" prefWidth="106.0" style="-fx-background-color: #ffc107;" text="Edit Username" />
+            <Button layoutX="490.0" layoutY="214.0" mnemonicParsing="false" onAction="#editPassword" prefHeight="32.0" prefWidth="106.0" style="-fx-background-color: #ffc107;" text="Edit Password" />
+            <Button layoutX="490.0" layoutY="266.0" mnemonicParsing="false" onAction="#editEmail" prefHeight="32.0" prefWidth="106.0" style="-fx-background-color: #ffc107;" text="Edit Email" />
+            <Text fill="MIDNIGHTBLUE" layoutX="7.0" layoutY="348.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Join a family as">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Button layoutX="14.0" layoutY="477.0" mnemonicParsing="false" onAction="#LogoutBtn" prefHeight="32.0" prefWidth="106.0" style="-fx-background-color: #ff0000;" text="LOGOUT" />
+            <Button layoutX="140.0" layoutY="477.0" mnemonicParsing="false" onAction="#confirmDeleteAccount" prefHeight="32.0" prefWidth="106.0" style="-fx-background-color: #ff0000;" text="Delete Account" />
+            <Label fx:id="nameField" layoutX="190.0" layoutY="105.0" prefHeight="26.0" prefWidth="156.0" text="Label" textFill="MIDNIGHTBLUE">
+               <font>
+                  <Font size="30.0" />
+               </font></Label>
+            <Label fx:id="usernameField" layoutX="193.0" layoutY="157.0" prefHeight="26.0" prefWidth="156.0" text="Label" textFill="MIDNIGHTBLUE">
+               <font>
+                  <Font size="30.0" />
+               </font></Label>
+            <Label fx:id="emailField" layoutX="193.0" layoutY="269.0" prefHeight="26.0" prefWidth="156.0" text="Label">
+               <font>
+                  <Font size="30.0" />
+               </font></Label>
+            <Label fx:id="passwordField" layoutX="190.0" layoutY="208.0" prefHeight="26.0" prefWidth="156.0" text="Label">
+               <font>
+                  <Font size="30.0" />
+               </font></Label>
+            <RadioButton fx:id="adminRadio" layoutX="243.0" layoutY="336.0" mnemonicParsing="false" onAction="#handleRoleChange" text="Admin">
+               <toggleGroup>
+                  <ToggleGroup fx:id="adminOrMember" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="memberRadio" layoutX="346.0" layoutY="336.0" mnemonicParsing="false" onAction="#handleRoleChange" text="Member" toggleGroup="$adminOrMember" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

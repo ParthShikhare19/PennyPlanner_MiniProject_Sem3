@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pennyplanner.SignupController">
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #191970;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="25.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@budget.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="32.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Penny">
+               <font>
+                  <Font name="Yu Gothic UI Light" size="53.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="17.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Planner">
+               <font>
+                  <Font name="Yu Gothic UI Light" size="53.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="400.0" prefWidth="401.0" style="-fx-background-color: white;" stylesheets="@buttons.css" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="MIDNIGHTBLUE" layoutX="123.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SIGN UP">
+               <font>
+                  <Font size="41.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="64.0" fitWidth="55.0" layoutX="172.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@user%20(2).png" />
+               </image>
+            </ImageView>
+            <Text fill="MIDNIGHTBLUE" layoutX="23.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <TextField fx:id="TxtName" layoutX="179.0" layoutY="143.0" prefHeight="26.0" prefWidth="206.0" promptText="Name" style="-fx-background-radius: 20;" />
+            <TextField fx:id="TxtUname" layoutX="179.0" layoutY="175.0" prefHeight="26.0" prefWidth="206.0" promptText="Username" style="-fx-background-radius: 20;" />
+            <TextField fx:id="TxtEmail" layoutX="179.0" layoutY="264.0" prefHeight="26.0" prefWidth="206.0" promptText="Email" style="-fx-background-radius: 20;" />
+            <Button layoutX="179.0" layoutY="329.0" mnemonicParsing="false" onAction="#SignUpAc" style="-fx-background-color: #ffc107; -fx-background-radius: 20;" text="SIGN UP">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <PasswordField fx:id="TxtPass" layoutX="178.0" layoutY="208.0" prefHeight="26.0" prefWidth="207.0" promptText="Password" style="-fx-background-radius: 20;" />
+            <PasswordField fx:id="TxtVerifyPass" layoutX="178.0" layoutY="235.0" prefHeight="26.0" prefWidth="207.0" promptText="Password" style="-fx-background-radius: 20;" />
+            <Text fill="MIDNIGHTBLUE" layoutX="13.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <Text fill="MIDNIGHTBLUE" layoutX="16.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <Text fill="MIDNIGHTBLUE" layoutX="11.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Verify Password">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <Text fill="MIDNIGHTBLUE" layoutX="21.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email-ID">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <Button layoutX="11.0" layoutY="360.0" mnemonicParsing="false" onAction="#Back" prefHeight="31.0" prefWidth="59.0" style="-fx-background-color: #ffc107; -fx-background-radius: 20;" text="Back">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

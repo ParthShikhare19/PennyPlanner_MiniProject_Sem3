@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="849.0" style="-fx-background-color: #191970;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pennyplanner.Controller">
+   <children>
+      <VBox layoutY="160.0" prefHeight="383.0" prefWidth="42.0" style="-fx-background-color: #191970;">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="259.0" prefWidth="42.0" spacing="17.0">
+               <children>
+                  <ImageView fitHeight="46.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@dashboard.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="46.0" fitWidth="32.0" layoutX="16.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@wallet.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="46.0" fitWidth="32.0" layoutX="16.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@analytics.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="32.0" layoutX="16.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@goals.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@settings.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <VBox layoutX="42.0" layoutY="158.0" prefHeight="383.0" prefWidth="158.0" style="-fx-background-color: #191970;">
+         <children>
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="196.0" style="-fx-background-color: #191970;" text="DASHBOARD" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#DashToAddexpense" prefHeight="46.0" prefWidth="202.0" style="-fx-background-color: #191970;" text="ADD EXPENSES" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#DashToAnalysis" prefHeight="46.0" prefWidth="202.0" style="-fx-background-color: #191970;" text="ANALYSYS" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#DashToGoals" prefHeight="46.0" prefWidth="202.0" style="-fx-background-color: #191970;" text="GOALS" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#DashToSettings" prefHeight="46.0" prefWidth="202.0" style="-fx-background-color: #191970;" text="SETTINGS" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <AnchorPane prefHeight="158.0" prefWidth="200.0" style="-fx-background-color: #191970;" stylesheets="@buttons.css">
+         <children>
+            <ImageView fitHeight="63.0" fitWidth="75.0" layoutX="69.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@user%20(3).png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="211.0" layoutY="10.0" prefHeight="523.0" prefWidth="628.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10;" stylesheets="@buttons.css">
+         <children>
+            <Separator layoutX="12.0" layoutY="67.0" prefHeight="0.0" prefWidth="604.0" />
+            <Text fill="MIDNIGHTBLUE" layoutX="14.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hi ">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Text>
+            <Text fx:id="NameLabel" fill="MIDNIGHTBLUE" layoutX="57.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="label">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Text>
+            <PieChart layoutX="12.0" layoutY="70.0" prefHeight="208.0" prefWidth="339.0" />
+            <AnchorPane layoutX="357.0" layoutY="82.0" prefHeight="169.0" prefWidth="258.0" style="-fx-background-color: #191970; -fx-background-radius: 20; -fx-border-color: #ffc107; -fx-border-radius: 19; -fx-border-width: 3.5;">
+               <children>
+                  <ChoiceBox fx:id="DashChoiceBox" layoutX="25.0" layoutY="21.0" prefHeight="16.0" prefWidth="174.0" />
+                  <Text fill="WHITE" layoutX="25.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Income :" wrappingWidth="78.13671875">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="25.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expense :" wrappingWidth="78.13671875">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="DashIncome" layoutX="129.0" layoutY="72.0" text="Label" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="DashExpense" layoutX="129.0" layoutY="120.0" text="Label" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Text fx:id="NameLabel1" fill="MIDNIGHTBLUE" layoutX="141.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="!">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Text>
+            <TableView fx:id="DashTable" layoutX="3.0" layoutY="307.0" prefHeight="215.0" prefWidth="622.0">
+               <columns>
+                  <TableColumn fx:id="dateColumn1" prefWidth="74.40008544921875" text="Date" />
+                  <TableColumn fx:id="descriptionColumn1" prefWidth="147.199951171875" text="Description" />
+                  <TableColumn fx:id="categoryColumn1" prefWidth="68.800048828125" text="Category" />
+                  <TableColumn fx:id="amountColumn1" prefWidth="61.5999755859375" text="Amount" />
+                  <TableColumn fx:id="typeColumn1" prefWidth="45.60003662109375" text="Type" />
+                  <TableColumn fx:id="paymentMethodColumn1" prefWidth="115.199951171875" text="Payment method" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Text fx:id="NameLabel2" fill="MIDNIGHTBLUE" layoutX="5.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recent Transactions" wrappingWidth="353.7281494140625">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

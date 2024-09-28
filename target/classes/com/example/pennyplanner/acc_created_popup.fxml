@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="345.0" prefWidth="487.0" style="-fx-background-radius: 0; -fx-background-color: #191970;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pennyplanner.Controller">
+   <children>
+      <Text fill="WHITE" layoutX="14.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Account Created !! kingly go back to login page and enter credentials" wrappingWidth="456.97802734375">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Text>
+      <Button fx:id="AccCreated" layoutX="225.0" layoutY="264.0" mnemonicParsing="false" onAction="#AccCreated" style="-fx-background-radius: 20; -fx-background-color: #ffc107;" text="ok">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="167.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@checked%20(2).png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

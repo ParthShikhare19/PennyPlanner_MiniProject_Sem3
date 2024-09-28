@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="849.0" style="-fx-background-color: #191970;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pennyplanner.AnalysisController">
+   <children>
+      <VBox layoutY="152.0" prefHeight="390.0" prefWidth="42.0" style="-fx-background-color: #191970;">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="300.0" prefWidth="41.0" spacing="17.0">
+               <children>
+                  <ImageView fitHeight="41.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@dashboard.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="46.0" fitWidth="32.0" layoutX="16.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@wallet.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="46.0" fitWidth="32.0" layoutX="16.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@analytics.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="32.0" layoutX="16.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@goals.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="43.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@settings.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <VBox layoutX="42.0" layoutY="149.0" prefHeight="383.0" prefWidth="157.0" style="-fx-background-color: #191970;">
+         <children>
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#AnalysisToDash" prefHeight="50.0" prefWidth="196.0" style="-fx-background-color: #191970;" text="DASHBOARD" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#AddExpenseFromAnalysis" prefHeight="51.0" prefWidth="158.0" style="-fx-background-color: #191970;" text="ADD EXPENSES" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="42.0" prefWidth="158.0" style="-fx-background-color: #191970;" text="ANALYSYS" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#AnalysisToGoal" prefHeight="52.0" prefWidth="158.0" style="-fx-background-color: #191970;" text="GOALS" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#AnalysisToSettings" prefHeight="28.0" prefWidth="158.0" style="-fx-background-color: #191970;" text="SETTINGS" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <AnchorPane prefHeight="158.0" prefWidth="200.0" style="-fx-background-color: #191970;" stylesheets="@buttons.css">
+         <children>
+            <ImageView fitHeight="63.0" fitWidth="75.0" layoutX="69.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@user%20(3).png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="211.0" layoutY="10.0" prefHeight="523.0" prefWidth="628.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10;">
+         <children>
+            <Text fill="MIDNIGHTBLUE" layoutX="14.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Analysis">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Text>
+            <Separator layoutX="13.0" layoutY="76.0" prefHeight="2.0" prefWidth="602.0" />
+            <Text fill="MIDNIGHTBLUE" layoutX="47.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="From">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <DatePicker fx:id="fromDate" layoutX="114.0" layoutY="81.0" prefHeight="18.0" prefWidth="158.0" />
+            <Text fill="MIDNIGHTBLUE" layoutX="320.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <DatePicker fx:id="toDate" layoutX="388.0" layoutY="81.0" prefHeight="18.0" prefWidth="158.0" />
+            <PieChart fx:id="pieChart" layoutX="20.8" layoutY="136.0" prefHeight="187.0" prefWidth="602.0" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="136.0" />
+            <BarChart fx:id="barChart" layoutX="15.0" layoutY="329.0" prefHeight="194.0" prefWidth="602.0" AnchorPane.bottomAnchor="10.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
